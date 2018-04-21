@@ -1,4 +1,6 @@
 require_relative 'boot'
+require 'awesome_print'
+require 'pry'
 
 require 'rails/all'
 

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :issues
+
+  devise_for :users
   get 'home/index'
 
   get 'home/issue'
