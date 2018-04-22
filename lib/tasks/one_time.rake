@@ -5,6 +5,7 @@ namespace :one_time do
       {name: 'Developer', description: 'Programmer'},
       {name: 'Tester', description: 'QA'}
     ]
+    return if Role.all.present?
     default_roles.each do |role|
       Role.create(role)
     end
@@ -18,10 +19,11 @@ namespace :one_time do
       {name: 'For Testing'},
       {name: 'Passed'}
     ]
+    return if Status.all.present?
     default_status.each do |status|
       Status.create(status)
     end
-    puts 'Successfully created initial roles.'
+    puts 'Successfully created initial status.'
   end
 
   desc "create default issue type"
@@ -30,10 +32,11 @@ namespace :one_time do
       {name: 'Bugs'},
       {name: 'Enhancement'}
     ]
+    return if IssueType.all.present?
     default_issue_type.each do |issue_type|
-      issue_type.create(status)
+      IssueType.create(issue_type)
     end
-    puts 'Successfully created initial roles.'
+    puts 'Successfully created initial issue type.'
   end
 
 end

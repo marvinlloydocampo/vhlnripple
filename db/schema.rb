@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180421140509) do
+ActiveRecord::Schema.define(version: 20180422031325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20180421140509) do
   create_table "issues", force: :cascade do |t|
     t.string "client_name", default: "", null: false
     t.integer "issue_type_id"
-    t.integer "assigned_developer"
-    t.integer "assigned_tester"
+    t.integer "assigned_developer_id"
+    t.integer "assigned_tester_id"
     t.integer "cycle_count"
     t.integer "days_per_cycle"
     t.datetime "release_date"

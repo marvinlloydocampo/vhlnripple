@@ -1,2 +1,44 @@
-<h1>Issues#show</h1>
-<p>Find me in app/views/issues/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client name:</strong>
+  <%= @issue.client_name %>
+</p>
+
+<p>
+  <strong>Issue type:</strong>
+  <%= @issue.issue_type_id %>
+</p>
+
+<p>
+  <strong>Assigned developer:</strong>
+  <%= @issue.assigned_developer_id %>
+</p>
+
+<p>
+  <strong>Assigned tester:</strong>
+  <%= @issue.assigned_tester_id %>
+</p>
+
+<p>
+  <strong>Cycle count:</strong>
+  <%= @issue.cycle_count %>
+</p>
+
+<p>
+  <strong>Days per cycle:</strong>
+  <%= @issue.days_per_cycle %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @issue.release_date %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @issue.status_id %>
+</p>
+
+<%= link_to 'Edit', edit_issue_path(@issue) %> |
+<%= link_to 'Back', issues_path %>
